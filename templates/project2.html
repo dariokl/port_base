@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dario Klopic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="static/css/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body style="overflow: visible;">
+  <div class="row">
+    <div class="col-lg-12" style="background:var(--main-bg-color);" >
+        <div class="container">
+              <h1 class="text-ceter">Flask based Web Shop</h1>
+          <hr>
+      <p style="color: white;">I started this project as an idea to help one of my best IRL friends with his small business. He was handling his requests with viber/whatsapp. Needless
+                to say it turned out to be very draining. I used this project as an opportunity to add Admin functionality for the first time , and allow my friend to update his shop items , and
+                respond on the customer requests.
+         <br><br>
+          Visit my <a href="https://github.com/dariokl"> GitHub</a> to check the source code.
+      </p>
+            <i class="fa fa-facebook fa-3x"></i>
+    </div>
+        </div>
+  </div>
+<div class="row">
+    <div class="container">
+    <div class="col-lg-12 col-sm-12 col-12" style="background:var(--third-bg-color); margin-top:-5rem;">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top: 3rem;">
+  <div class="carousel-inner active" style="margin-top: 3rem;">
+    <div class="carousel-item active" style="margin-top: 3rem;">
+      <img class="d-block w-100 h-90" src="/static/img/project2/1.png" alt="First slide">
+    </div>
+    <div class="carousel-item" style="margin-top: 3rem;">
+      <img class="d-block w-100 h-90" src="/static/img/project2/2.png" alt="Second slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+        <hr >
+        </div>
+    </div>
+  </div>
+  </div>
+ <a href="{{url_for('index')}}" class="previous sticky"  style="text-decoration: none;">&#8249</a>
+  <div class="section"></div>
+  <div class="container">
+      <hr>
+      <h1 class="text-center"> Description of project.</h1>
+      <hr>
+  <div class="row">
+      <div class="col-sm-6 col-lg-6 broke1" data-aos="fade-right">
+          <p>
+              Like any other web shop , this app contains register/login functionality , cart functionality created with flask-session and admin dashboard
+              to control the models and orders for his products. On top of that i wanted to pass this web app to my friend with his admin email and allow him
+              to add all the product he had in his work shop. So it would help him to maintain the web site , atleast the product/shop part.
+          </p>
+
+      </div>
+            <div class="col-sm-6 col-lg-6" data-aos="fade-left" data-aos-easing="ease-in" data-aos-delay="800">
+          <p>
+              He would have ability
+              to edit his "Table" model and add required description, price , and pictures of his product.<br><br>
+             With not much of css experience for past , i decided to fully customize this page and try to create something that would fit his design ideas.
+              The web page is built by using boostrap4 and css. It has a little bit of JS to control the landing page animation wich was one of hardest design parts
+              on this web app.
+          </p>
+      </div>
+      <h1 class="text-center">Main Goal and Admin Dashboard.</h1>
+          <hr>
+      <div class="row">
+          <div class="col-sm-6 col-lg-6" data-aos="fade-right">
+              <p><strong>After</strong> working on much smaller projects , i never had any need to implement the Admin dashboard , at first i wanted to roll out my own dashboard but i dropped
+              that idea as my friend suggested that he might need additional models for his products so i took the safe path and decided to use Flask-Admin lib.
+              <br><br>One of biggest challenges here was ability to add image-upload-field. Running back and fort , i had no luck of finding sort of "drop-box" field in Flask-admin. Instead of drop
+              box i used regular image fields , that would allow him to add 3 images of his product. I took this approach because he has fairly small amount of products to display , and
+              anything beyond that would be simply unnecessary. <br><br>
+                  <strong>Overriding</strong> the regular AdminView was quiet tasking. Flask-Admin is truly a great lib but it really lacks some parts of documentation
+              eventually i even had to add the event listeners in order to delete the images from the product/img folder.<br>
+                  In order to achieve that i had to create @property on my "Product" models
+              so they would return the path of the stored image.</p>
+          </div>
+          <div class="col-sm-6 col-lg-6" >
+              <pre style="color: black; font-size: 80% ;" data-aos="fade" data-aos-easing="ease-in" data-aos-delay="800">
+class MultiImage(AdminView):
+    """Overriding the custom view and adding file upload forms , since the admin would need an ability to add new
+    products to his web site , i didn't find enough material on this topic so i created 3 individual fields , i guess
+    this will require changes in future."""
+    .......................................
+                 ....
+    form_extra_fields = {
+            'filename': form.ImageUploadField(
+            'image',
+            base_path = image_path,
+            url_relative_path = 'app/static/images',
+            ),
+
+            'filename_two': form.ImageUploadField(
+            'image_two',
+            base_path = image_path,
+            url_relative_path = 'app/static/images',
+            ),
+
+            'filename_tree': form.ImageUploadField(
+            'image_tree',
+            base_path = image_path,
+            url_relative_path = 'app/static/images',
+            ),
+
+        }
+
+    column_list = [
+            'image', 'name', 'filename', 'price',
+        ]
+
+    column_formatters = {
+            'image': _list_thumbnail
+        }
+
+    @event.listens_for(Article, 'after_delete')
+    def del_image(mapper, connection, target):
+        if target.filename is not None:
+                try:
+                    os.remove(op.join(image_path, target.filename))
+                    os.remove(op.join(image_path, target.filename_two))
+                    os.remove(op.join(image_path, target.filename_tree))
+                except OSError or TypeError:
+                    pass
+              </pre>
+          </div>
+      </div>
+  </div>
+      <h1 class="text-center"> Cart function and Flask-session.</h1>
+      <div class="row">
+          <div class="col-sm-6 col-lg-6" data-aos="fade-right">
+              <p> <strong>I was</strong> using flask session in the past so the general work flow around the cart was pretty clear to me from begging.
+                  The only doubt i had should i use flask-session as a server based cookie , because it has certain kind of limitation while interacting
+                  with front end.
+                  <br><br>
+                  <strong>I decided</strong> to stick with flask-session because real impact on server performance would not be that huge ,  the potential
+                  market for this web app is quiet small. On the other hand flask session has pretty neat ability to work with Redis so assumed this
+                  is a productive method to handle my cart functionality.
+              </p>
+          </div>
+          <div class="col-sm-6 col-lg-6" data-aos="fade" data-aos-easing="ease-in" data-aos-delay="800">
+       <pre style="color: black; font-size: 80% ;">
+@controla.route('/<int:product_id>', methods=['GET', 'POST'])
+def product(product_id):
+    """Creating flask session 'cart' to add the each product a customer picks from shop, its pretty simple condition block
+    if there is no cart its simply creates one and appends the first item clicked if there is one with the same name, it just
+    adds +1 on the quantity and finally if customer order totally different product it appends it to session."""
+
+    form = OrderForm()
+
+    product = Article.query.get_or_404(product_id)
+
+    total = 1
+    if form.validate_on_submit():
+        if "cart" not in session:
+            session["cart"].append({'name': product.name, 'price': product.price,
+                                    'q': total, 'img': product.filename, 'id': product.id})
+
+        elif product.name in [d['name'] for d in session['cart']]:
+            for d in session['cart']:
+                if d['name'] == product.name:
+                    d['q'] += 1
+                    d['price'] = d['q'] * d['price']
+
+        else:
+            session["cart"].append({'name': product.name, 'price': product.price,
+                                    'q': total, 'img': product.filename, 'id': product.id})
+
+        flash("Successfully added to cart!")
+              </pre>
+          </div>
+
+      </div>
+      <div class="row">
+          <h1> What i have Learned and Conclusion.</h1>
+          <div class="col-sm-6 col-lg-6" style="text-align: justify; text-justify: inter-word;" data-aos="fade-right">
+              <p>
+                Integrating a functional cart was a big deal for me , the interaction with flask-session was the key. It allows me to use same analogy
+                  on any upcoming project and i am looking forward to use it alongside with Redis.
+              </p>
+          </div>
+          <div class="col-sm-6 col-lg-6" style="color: black; font-size: 80% ;" data-aos="fade-left" data-aos-easing="ease-in" data-aos-delay="800">
+              <p>The flask-admin integration went pretty well , but there is a lot of "hacking" behind the actual result . The /admin route is quiet blank and empty
+              i will focus myself to make this dashboard much more visually pleasing the standard one you get out of the box.</p>
+          </div>
+      </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
