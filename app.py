@@ -18,4 +18,5 @@ def project2():
 def project3():
     return render_template('project3.html')
 
-
+if __name__ == "__main__":
+    app.run()
