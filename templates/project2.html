@@ -14,11 +14,11 @@
 </head>
 <body style="overflow: visible;">
   <div class="row">
-    <div class="col-lg-12" style="background:var(--main-bg-color);" >
+    <div class="col-lg-12" style="background:var(--main-bg-color); box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 8px 8px rgba(0,0,0,0.11),0 16px 16px rgba(0,0,0,0.11),0 32px 32px rgba(0,0,0,0.11);" >
         <div class="container">
               <h1 class="text-ceter">Flask based Web Shop</h1>
           <hr>
-      <p style="color: white;">I started this project as an idea to help one of my best IRL friends with his small business. He was handling his requests with viber/whatsapp. Needless
+      <p style="color: white;"> I started this project as an idea to help one of my best IRL friends with his small business. He was handling his requests with viber/WhatsApp. Needless
                 to say it turned out to be very draining. I used this project as an opportunity to add Admin functionality for the first time , and allow my friend to update his shop items , and
                 respond on the customer requests.
          <br><br>
@@ -73,8 +73,8 @@
           <p>
               He would have ability
               to edit his "Table" model and add required description, price , and pictures of his product.<br><br>
-             With not much of css experience for past , i decided to fully customize this page and try to create something that would fit his design ideas.
-              The web page is built by using boostrap4 and css. It has a little bit of JS to control the landing page animation wich was one of hardest design parts
+             With not much of CSS experience for past , I decided to fully customize this page and try to create something that would fit his design ideas.
+              The web page is built by using boostrap4 and CSS. It has a little bit of JS to control the landing page animation which was one of hardest design parts
               on this web app.
           </p>
       </div>
@@ -82,14 +82,14 @@
           <hr>
       <div class="row">
           <div class="col-sm-6 col-lg-6" data-aos="fade-right">
-              <p><strong>After</strong> working on much smaller projects , i never had any need to implement the Admin dashboard , at first i wanted to roll out my own dashboard but i dropped
+              <p><strong>After</strong> working on much smaller projects , I never had any need to implement the Admin dashboard , at first I wanted to roll out my own dashboard but i dropped
               that idea as my friend suggested that he might need additional models for his products so i took the safe path and decided to use Flask-Admin lib.
-              <br><br>One of biggest challenges here was ability to add image-upload-field. Running back and fort , i had no luck of finding sort of "drop-box" field in Flask-admin. Instead of drop
-              box i used regular image fields , that would allow him to add 3 images of his product. I took this approach because he has fairly small amount of products to display , and
+              <br><br>One of biggest challenges here was ability to add image-upload-field. Running back and fort , I had no luck of finding sort of "drop-box" field in Flask-adding. Instead of drop
+              box I used regular image fields , that would allow him to add 3 images of his product. I took this approach because he has fairly small amount of products to display , and
               anything beyond that would be simply unnecessary. <br><br>
                   <strong>Overriding</strong> the regular AdminView was quiet tasking. Flask-Admin is truly a great lib but it really lacks some parts of documentation
-              eventually i even had to add the event listeners in order to delete the images from the product/img folder.<br>
-                  In order to achieve that i had to create @property on my "Product" models
+              eventually I even had to add the event listeners in order to delete the images from the product/Imgur folder.<br>
+                  In order to achieve that I had to create @property on my "Product" models
               so they would return the path of the stored image.</p>
           </div>
           <div class="col-sm-6 col-lg-6" >
@@ -145,12 +145,12 @@ class MultiImage(AdminView):
       <h1 class="text-center"> Cart function and Flask-session.</h1>
       <div class="row">
           <div class="col-sm-6 col-lg-6" data-aos="fade-right">
-              <p> <strong>I was</strong> using flask session in the past so the general work flow around the cart was pretty clear to me from begging.
-                  The only doubt i had should i use flask-session as a server based cookie , because it has certain kind of limitation while interacting
+               <p> <strong>I was</strong> using flask session in the past so the general work flow around the cart was pretty clear to me from begging.
+                  The only doubt I had should I use flask-session as a server based cookie , because it has certain kind of limitation while interacting
                   with front end.
                   <br><br>
                   <strong>I decided</strong> to stick with flask-session because real impact on server performance would not be that huge ,  the potential
-                  market for this web app is quiet small. On the other hand flask session has pretty neat ability to work with Redis so assumed this
+                  market for this web app is quiet small. On the other hand flask session has pretty neat ability to work with redis so assumed this
                   is a productive method to handle my cart functionality.
               </p>
           </div>

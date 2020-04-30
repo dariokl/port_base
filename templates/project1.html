@@ -16,14 +16,11 @@
 </head>
 <body style="overflow: visible;">
   <div class="row">
-    <div class="col-lg-12" style="background:var(--main-bg-color);" >
+    <div class="col-lg-12" style="background:var(--main-bg-color); box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 8px 8px rgba(0,0,0,0.11),0 16px 16px rgba(0,0,0,0.11),0 32px 32px rgba(0,0,0,0.11);" >
         <div class="container">
               <h1 class="text-ceter">Flask based Web Shop</h1>
           <hr>
-      <p style="color: white;">Started off as an idea to help out a "friend" i knew over discord , i took the oportunity to learn something new about flask user authenthication , admind dashboard
-      and for the first time approach my own project with totally custom CSS. I used boostrap for responsivnes. I used postgreSQL for the first time and actually loved it , i was using MYSQL
-      prior this. The web app is fully functional shop that handles registration with itsdangerous java timed tokens , i added some basic data visualization on admin dashboard with charts.js that
-      can be improved but it was enough for the clients requirement.
+      <p style="color: white;">Started off as an idea to help out a "friend" I knew over discord, I took the opportunity to learn something new about flask user authentication, admin dashboard and for the first time approach my own project with totally custom CSS. I used bootstrap for responsiveness. I used PostgreSQL for the first time and actually loved it, I was using MYSQL prior this. The web app is a fully functional shop that handles registration with its dangerous Java timed tokens, I added some basic data visualization on admin dashboard with charts. js that can be improved but it was enough for the clients
          <br><br>
           Visit my <a href="https://github.com/dariokl"> GitHub</a> to check the source code.
       </p>
@@ -67,23 +64,23 @@
   <div class="section"></div>
   <div class="container">
       <hr>
-      <h1 class="text-center"> Description of project </h1>
+      <h1 class="text-center"> Description of Project. </h1>
       <hr>
   <div class="row">
       <div class="col-sm-6 col-lg-6 broke1" data-aos="fade-right">
           <p>
-              Before i start describing the flow of this project , id like to address that i am aware that this kind of web apps
+              Before I start describing the flow of this project , id like to address that I am aware that this kind of web apps
               are fairly easy achievable with Shopify and similar tools. And it would probably take much less time to set up a shop like that.
-              But i wanted to learn certain kind of back end mechanisms that have same analogy in other fields. Creating and handling your users verification
-              is a quiet common task , using flask-session to store users session data is also very common. So just for sake of my own knowledge i used my time to
-              learn something that i am going to use for a very long time.
+              But I wanted to learn certain kind of back end mechanisms that have same analogy in other fields. Creating and handling your users verification
+              is a quiet common task , using flask-session to store users session data is also very common. So just for sake of my own knowledge I used my time to
+              learn something that I am going to use for a very long time.
           </p>
 
       </div>
             <div class="col-sm-6 col-lg-6" data-aos="fade-left" data-aos-easing="ease-in" data-aos-delay="800">
           <p>
               This project was started as an idea to help a friend that was having a gaming web shop, it would allow him to take orders from people outside the discord
-              circle he had. It would allow him to track orders server by server , allow him to organise his time much more efficently then before. The initial idea was
+              circle he had. It would allow him to track orders server by server , allow him to organize his time much more efficiently then before. The initial idea was
               creating a web page that allows users to submit an order of good from his shop and then he would contact his customers to proceed the order. This approach was taken
               because all the possible third-party payment integration options are very limited on Balkan.
           </p>
@@ -92,14 +89,14 @@
           <hr>
       <div class="row">
           <div class="col-sm-6 col-lg-6" data-aos="fade-right">
-              <p><strong>One</strong> of my main focus points on this project was expanding my knowledge about Flask-Admin , wich was vital for this project.
+          <p><strong>One</strong> of my main focus points on this project was expanding my knowledge about Flask-Admin , which was vital for this project.
               My client needed functional admin dash board with ability to add his product and with ability to track down new orders.
-              After reading some of Flask-Admin Doc. i was aware of problem with app factory. So i took a long route and decided to
-              totally change the way i was structuring the wep app.
+              After reading some of Flask-Admin Doc. I was aware of problem with app factory. So I took a long route and decided to
+              totally change the way I was structuring the web app.
                   <br><br>
                   <strong>I wanted</strong> to avoid all possible collisions and keep the admin model-views separate from
-              the app __init__. Learning how to customize Flask-Admin was whole another thing , serving the right html to override the master.html was quiet tasking
-              especially because it was my frist time doing such thing , but in the end it all turned out fine.</p>
+              the app __init__. Learning how to customize Flask-Admin was whole another thing , serving the right HTML to override the master.html was quiet tasking
+              especially because it was my first time doing such thing , but in the end it all turned out fine.</p>
           </div>
           <div class="col-sm-6 col-lg-6" data-aos="fade" data-aos-easing="ease-in" data-aos-delay="800">
               <pre style="color: black; font-size: 80% ;">
@@ -142,11 +139,11 @@ def create_app(confing_name):
       <h1 class="text-center"> Custom admin Dashboard.</h1>
       <div class="row">
           <div class="col-sm-6 col-lg-6" data-aos="fade-right">
-              <p> On my very first glance Flask-Admin sounded like a perfect lib. that was fairly begginer friendly so i decided to use it on the project i have finished before this one.
-              By the time i have finished one of my first projects i have noticed that the admin/dasboard index page is a blank page. <br><br>
+              <p> On my very first glance Flask-Admin sounded like a perfect lib. That was fairly beginner friendly so I decided to use it on the project I have finished before this one.
+              By the time I have finished one of my first projects I have noticed that the admin/dashboard index page is a blank page. <br><br>
                   <strong>I figured</strong> out how to edit the Flask-Admin base view,
-              but that just a static HTML page , and i wanted to have funcional dashboard based on updates from the users so my client could have for example a graph that contains data
-              about his orders and so on. I have created a model that tracks basic traffic over the web site , so i used it to count unique views , orders and confirmed registered users.
+              but that just a static HTML page , and I wanted to have functional dashboard based on updates from the users so my client could have for example a graph that contains data
+              about his orders and so on. I have created a model that tracks basic traffic over the web site , so I used it to count unique views , orders and confirmed registered users.
               </p>
           </div>
           <div class="col-sm-6 col-lg-6"data-aos="fade" data-aos-easing="ease-in" data-aos-delay="800">
@@ -184,16 +181,16 @@ class MyHomeView(AdminIndexView):
           <h1> What i have Learned.</h1>
           <div class="col-sm-6 col-lg-6" style="text-align: justify; text-justify: inter-word;" data-aos="fade-right">
               <p>
-                  To go straight to the point , i learned how to use JWS for account verification with TimedJSONWebSignatureSerializer.
-                  <br><br><strong>I wasnt</strong> paying too much attention to the server-user interaction after the registration. And even when i did so , i didnt use
+                  To go straight to the point , I learned how to use JWS for account verification with TimedJSONWebSignatureSerializer.
+                  <br><br><strong>I wasn't</strong> paying too much attention to the server-user interaction after the registration. And even when I did so , I didn't use
                   JWS method. It was fun and a great way to finalize your account system and actually protects your user and they're data.
-                  <br><br><strong>Also</strong> i used a very simple method to add "Admin" role to a user with the required email address. I had a lot more work with my db.Classes this time,
-                  some small things like <strong>@property</strong> for password was something i overlooked in past.
+                  <br><br><strong>Also</strong> I used a very simple method to add "Admin" role to a user with the required email address. I had a lot more work with my db.Classes this time,
+                  some small things like <strong>@property</strong> for password was something I overlooked in past.
                   <br><br>
                   All the server-user/email scripts are handled with Flask-Email added to send_email() function that was triggered on right request was it either registration , password
-                  reset request or email reset. The only thing that would require change is using the SendGrid etc. in order to keep the notifications from the page outside the trash !
+                  reset request or email reset. The only thing that would require change is using the SendGrid etc. In order to keep the notifications from the page outside the trash !
                   <br><br>
-                  I also moved from MYSQL to postgreSQL and it feels little more mature to me and i love the PG-admin dashboard and overral control over the databases i have created on my server.
+                  I also moved from MYSQL to postgreSQL and it feels little more mature to me and I love the PG-admin dashboard and overall control over the databases I have created on my server.
               </p>
           </div>
           <div class="col-sm-6 col-lg-6" style="color: black; font-size: 80% ;" data-aos="fade" data-aos-easing="ease-in" data-aos-delay="800">
@@ -256,20 +253,20 @@ class MyHomeView(AdminIndexView):
           <h1> Conclusion and HTML Work.</h1>
           <div class="col-sm-6 col-lg-6" data-aos="fade-right">
               <p>
-                  Overall I am happy with the progress i made and the path i took with the changes on my APP structure in general.
+                  Overall I am happy with the progress I made and the path I took with the changes on my APP structure in general.
                   This feels like much healthier environment and allows my application to scale without looking like a huge mess ,
-                  avoiding all the possible circular imports with app factory is quiet satisfying because i struggled a lot with Flask-Admin
-                  on the project i had before this one. <br><br>
+                  avoiding all the possible circular imports with app factory is quiet satisfying because I struggled a lot with Flask-Adding
+                  on the project I had before this one. <br><br>
                   The shop has all the required functionality and it would allow anyone who uses it to
-                  add goods and track upcoming orders wich was the main goal of this app. Additionally i wanted to add custom admin messenger but it
-                  would require Pusher in order to function so i just avoided to avoid using third-party elements for now !
+                  add goods and track upcoming orders which was the main goal of this app. Additionally I wanted to add custom admin messenger but it
+                  would require Pusher in order to function so I just avoided to avoid using third-party elements for now !
               </p>
           </div>
           <div class="col-sm-6 col-lg-6" data-aos="fade-left" data-aos-easing="ease-in" data-aos-delay="800">
               <p>
-              Prior this project i was still having hard time to edit Boostrap CSS and make my page have "unique" feeling , i think i created a decent
-              gap between the projects i had before this one , and i can see myself experimenting with some other css libraries got my eyes on tailwind.css.
-              Actually i am quiet happy with progress i made with HTML if by any chance you decide to take a look at my very first project "NBA_blog" it was just
+              Prior this project I was still having hard time to edit Boostrap CSS and make my page have "unique" feeling , I think I created a decent
+              gap between the projects I had before this one , and I can see myself experimenting with some other CSS libraries got my eyes on tailwind.css.
+              Actually I am quiet happy with progress I made with HTML if by any chance you decide to take a look at my very first project "NBA_blog" it was just
               bare bones from boostrap and a lot of back-end work.
                   <br><br>
                   And if you ever need such awesome web shop make sure you contact me :)

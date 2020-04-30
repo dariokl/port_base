@@ -12,17 +12,16 @@
     <link rel="stylesheet" href="static/css/style2.css">
     <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 </head>
 <body style="overflow: visible;">
   <div class="row">
-    <div class="col-lg-12" style="background:var(--main-bg-color);" >
+    <div class="col-lg-12" style="background:var(--main-bg-color); box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 8px 8px rgba(0,0,0,0.11),0 16px 16px rgba(0,0,0,0.11),0 32px 32px rgba(0,0,0,0.11);" >
         <div class="container">
               <h1 class="text-ceter">NBA App based on Selenium</h1>
           <hr>
-      <p style="color: white;">This was my very first Flask project. It was just 20 days after i finished learning/reading/practicing about flask.
+      <p style="color: white;">This was my very first Flask project. It was just 20 days after I finished learning/reading/practicing about flask.
       Reading the suggestions from other programmers , everyone would suggest to automate something that you do each and every day. For me that was checking
-      on NBA stats after games would finish. So i decided to create a small web app , that would have live feeds based on scraped data. It would contain all the
+      on NBA stats after games would finish. So I decided to create a small web app , that would have live feeds based on scraped data. It would contain all the
       statistic data for every player in the league , charts.js chart to compare player performance and even a small live chat "hub" based on socketIo.
       <br><br>
           Visit my <a href="https://github.com/dariokl"> GitHub</a> to check the source code.
@@ -71,8 +70,8 @@
       <div class="col-sm-6 col-lg-6 broke1" data-aos="fade-right"  data-aos-easing="ease-in-out">
           <p>
               This web app contains , registration and login that is used to chat with online users on the app . I was using socketIo to create a chat room inside one of my views.
-              That was the main reason why i created login and register system. The landing page would contain the last night scores based on the results that would be scraped off
-              some of portals using bs4/selenium. I used youtubeApi to get the newest nba-related videos on the channel that i was visiting the most.
+              That was the main reason why I created login and register system. The landing page would contain the last night scores based on the results that would be scraped off
+              some of portals using bs4/selenium. I used youtubeApi to get the newest nba-related videos on the channel that I was visiting the most.
           </p>
 
       </div>
@@ -89,12 +88,12 @@
       <div class="row">
           <div class="col-sm-6 col-lg-6" data-aos="fade-right">
               <p>
-                  <strong>Main goal</strong> on this application was to feed my database with fresh news each 24 hours, since i could not find any free API service that would contain similar data,
-              i used selenium and bs4 to extract required data from the web page to the database. All statistic changes would be tracked and updated every day , also there was a
+                  <strong>Main goal</strong> on this application was to feed my database with fresh news each 24 hours, since I could not find any free API service that would contain similar data,
+              I used selenium and bs4 to extract required data from the web page to the database. All statistic changes would be tracked and updated every day , also there was a
               route that contained fresh data about player injury updates.
               <br><br>
-              <strong>Revolving</strong> around the Selenium and bs/4 required some celery work to update the database every 24 hours. As a beginner i struggled a lot with integration of Chart.js.
-              But in the end i managed to create the graph comparison between the players.
+              <strong>Revolving</strong> around the Selenium and bs/4 required some celery work to update the database every 24 hours. As a beginner I struggled a lot with integration of Chart.js.
+              But in the end I managed to create the graph comparison between the players.
               </p>
           </div>
           <div class="col-sm-6 col-lg-6" data-aos="fade" data-aos-delay="800" ata-aos-easing="ease-in" >
@@ -137,15 +136,15 @@
       <div class="row">
           <div class="col-sm-6 col-lg-6" data-aos="fade-right">
               <p>
-                  <strong>At</strong> this time i didnt know much about front end work after a while i figured out i could use flask-socketIo to achieve the chat hub, functionality.
-                  But the JavaScript part was rather than confusing to me and this was the part of application i was stucked the most.
+                  <strong>At</strong> this time I didn't know much about front end work after a while I figured out I could use flask-socketIo to achieve the chat hub, functionality.
+                  But the JavaScript part was rather than confusing to me and this was the part of application I was stucked the most.
                   <br><br>
                   <strong>After</strong> spending quiet a few days , reading
-                  and watching tutorials i figured out how to create a chat room , even tough after the deployment on Heroku the chat room was working im not quiet sure how much
-                  of traffic i could actually handle.
+                  and watching tutorials I figured out how to create a chat room , even tough after the deployment on Heroku the chat room was working I'm not quiet sure how much
+                  of traffic I could actually handle.
                   <br><br>
-                  <strong>This</strong> part of project helped me a lot to get rid of the "i hate JS" mind set and from this point i was much more confident to work with JQuery wich gives the required
-                  functionality on the front-end part of my apps. On the back end i used emmit method so all the messages get displayed once they are sent from registered user.
+                  <strong>This</strong> part of project helped me a lot to get rid of the "I hate JS" mind set and from this point I was much more confident to work with JQuery which gives the required
+                  functionality on the front-end part of my apps. On the back end I used emit method so all the messages get displayed once they are sent from registered user.
               </p>
           </div>
           <div class="col-sm-6 col-lg-6" data-aos="fade" data-aos-delay="800" ata-aos-easing="ease-in">
@@ -195,15 +194,15 @@ document.querySelector('#send_message').onclick = () =>{
           <h1> What i have Learned and Conclusion.</h1>
           <div class="col-sm-6 col-lg-6" style="text-align: justify; text-justify: inter-word;" data-aos="fade-right">
               <p>
-                I could write pages of what i have learn , due to the fact that this was my very first Flask project , i have learned how to create db Models , how to
-                  insert bulk data inside the database tables. All the scraping work allowed me to understand the database models relationship , i had a chance to
-                  interact with JS and get familiar with some basic front-end concepts like making an ajax call or working with SocketIo.
+                I could write pages of what I have learn , due to the fact that this was my very first Flask project , I have learned how to create db Models , how to
+                  insert bulk data inside the database tables. All the scraping work allowed me to understand the database models relationship , I had a chance to
+                  interact with JS and get familiar with some basic front-end concepts like making an Ajax call or working with SocketIo.
               </p>
           </div>
           <div class="col-sm-6 col-lg-6" style="color: black; font-size: 80% ;" data-aos="fade" data-aos-delay="800" ata-aos-easing="ease-in">
               <p>
-              If you decide to take a peak on this code on git hub please be aware that i had 3 moths of coding experience , the web app structure is nothing like it should be
-              i even left the migration folder on the git respo, also there is almost next to none CSS work because i didnt know any. So in order for this app to be actually
+              If you decide to take a peak on this code on git hub please be aware that I had 3 moths of coding experience , the web app structure is nothing like it should be
+              I even left the migration folder on the git respo, also there is almost next to none CSS work because I didn't know any. So in order for this app to be actually
               fully functional and ready for deployment it would take some serious time to rewrite most of my app logic.
               </p>
           </div>
