@@ -6,99 +6,135 @@
     <title>Dario Klopic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- MATERIAL DESIGN ICONIC FONT -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="static/css/style2.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
-<body style="overflow: visible;">
-  <div class="row">
-    <div class="col-lg-12" style="background:var(--main-bg-color); box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 8px 8px rgba(0,0,0,0.11),0 16px 16px rgba(0,0,0,0.11),0 32px 32px rgba(0,0,0,0.11);" >
-        <div class="container">
-              <h1 class="text-ceter">Flask based Web Shop</h1>
-          <hr>
-      <p style="color: white;">Started off as an idea to help out a "friend" I knew over discord, I took the opportunity to learn something new about flask user authentication, admin dashboard and for the first time approach my own project with totally custom CSS. I used bootstrap for responsiveness. I used PostgreSQL for the first time and actually loved it, I was using MYSQL prior this. The web app is a fully functional shop that handles registration with its dangerous Java timed tokens, I added some basic data visualization on admin dashboard with charts. js that can be improved but it was enough for the clients
-         <br><br>
-          Visit my <a href="https://github.com/dariokl"> GitHub</a> to check the source code.
-      </p>
-            <i class="fa fa-facebook fa-3x"></i>
-    </div>
-        </div>
-  </div>
-<div class="row">
-    <div class="container">
-    <div class="col-lg-12 col-sm-12 col-12" style="background:var(--third-bg-color); margin-top:-5rem;">
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top: 3rem;">
-  <div class="carousel-inner" style="margin-top: 3rem;">
-    <div class="carousel-item active" style="margin-top: 3rem;">
-      <img class="d-block w-100 h-90" src="/static/img/project1/2.png" alt="First slide">
-    </div>
-    <div class="carousel-item" style="margin-top: 3rem;">
-      <img class="d-block w-100 h-90" src="/static/img/project1/1.png" alt="Second slide">
-    </div>
-    <div class="carousel-item" style="margin-top: 3rem;">
-      <img class="d-block w-100 h-90" src="/static/img/project1/3.png" alt="Third slide">
-    </div>
-      <div class="carousel-item" style="margin-top: 3rem;">
-      <img class="d-block w-100 h-90" src="/static/img/project1/5.png" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+<body onload="transition()">
+<div class="loader">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+    <div class="bar5"></div>
+    <div class="bar6"></div>
 </div>
-        <hr >
+<main>
+    <div class="-content -index">
+        <div class="row">
+            <div class="col-lg-12"
+                 style="background:var(--main-bg-color); box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 8px 8px rgba(0,0,0,0.11),0 16px 16px rgba(0,0,0,0.11),0 32px 32px rgba(0,0,0,0.11);">
+                <div class="container">
+                    <h1 class="text-ceter">Flask based Web Shop</h1>
+                    <hr>
+                    <p style="color: white;">Started off as an idea to help out a "friend" I knew over discord, I took
+                        the opportunity to learn something new about flask user authentication, admin dashboard and for
+                        the first time approach my own project with totally custom CSS. I used bootstrap for
+                        responsiveness. I used PostgreSQL for the first time and actually loved it, I was using MYSQL
+                        prior this. The web app is a fully functional shop that handles registration with its dangerous
+                        Java timed tokens, I added some basic data visualization on admin dashboard with charts. js that
+                        can be improved but it was enough for the clients
+                        <br><br>
+                        Visit my <a href="https://github.com/dariokl"> GitHub</a> to check the source code.
+                    </p>
+                    <i class="fa fa-facebook fa-3x"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="col-lg-12 col-sm-12 col-12" style="background:var(--third-bg-color); margin-top:-5rem;">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"
+                         style="margin-top: 3rem;">
+                        <div class="carousel-inner" style="margin-top: 3rem;">
+                            <div class="carousel-item active" style="margin-top: 3rem;">
+                                <img class="d-block w-100 h-90" src="/static/img/project1/2.png" alt="First slide">
+                            </div>
+                            <div class="carousel-item" style="margin-top: 3rem;">
+                                <img class="d-block w-100 h-90" src="/static/img/project1/1.png" alt="Second slide">
+                            </div>
+                            <div class="carousel-item" style="margin-top: 3rem;">
+                                <img class="d-block w-100 h-90" src="/static/img/project1/3.png" alt="Third slide">
+                            </div>
+                            <div class="carousel-item" style="margin-top: 3rem;">
+                                <img class="d-block w-100 h-90" src="/static/img/project1/5.png" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                           data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                           data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
-  </div>
-   <a href="{{url_for('index')}}" class="previous sticky"  style="text-decoration: none;">&#8249</a>
-  <div class="section"></div>
-  <div class="container">
-      <hr>
-      <h1 class="text-center"> Description of Project. </h1>
-      <hr>
-  <div class="row">
-      <div class="col-sm-6 col-lg-6 broke1" data-aos="fade-right">
-          <p>
-              Before I start describing the flow of this project , id like to address that I am aware that this kind of web apps
-              are fairly easy achievable with Shopify and similar tools. And it would probably take much less time to set up a shop like that.
-              But I wanted to learn certain kind of back end mechanisms that have same analogy in other fields. Creating and handling your users verification
-              is a quiet common task , using flask-session to store users session data is also very common. So just for sake of my own knowledge I used my time to
-              learn something that I am going to use for a very long time.
-          </p>
+    <a href="{{url_for('index')}}" class="previous sticky" style="text-decoration: none;">&#8249</a>
+    <div class="section"></div>
+    <div class="container">
+        <hr>
+        <h1 class="text-center"> Description of Project. </h1>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6 col-lg-6 broke1" data-aos="fade-right">
+                <p>
+                    Before I start describing the flow of this project , id like to address that I am aware that this
+                    kind of web apps
+                    are fairly easy achievable with Shopify and similar tools. And it would probably take much less time
+                    to set up a shop like that.
+                    But I wanted to learn certain kind of back end mechanisms that have same analogy in other fields.
+                    Creating and handling your users verification
+                    is a quiet common task , using flask-session to store users session data is also very common. So
+                    just for sake of my own knowledge I used my time to
+                    learn something that I am going to use for a very long time.
+                </p>
 
-      </div>
+            </div>
             <div class="col-sm-6 col-lg-6" data-aos="fade-left" data-aos-easing="ease-in" data-aos-delay="800">
-          <p>
-              This project was started as an idea to help a friend that was having a gaming web shop, it would allow him to take orders from people outside the discord
-              circle he had. It would allow him to track orders server by server , allow him to organize his time much more efficiently then before. The initial idea was
-              creating a web page that allows users to submit an order of good from his shop and then he would contact his customers to proceed the order. This approach was taken
-              because all the possible third-party payment integration options are very limited on Balkan.
-          </p>
-      </div>
-      <h1 class="text-center">Main Goal and App Factory.</h1>
-          <hr>
-      <div class="row">
-          <div class="col-sm-6 col-lg-6" data-aos="fade-right">
-          <p><strong>One</strong> of my main focus points on this project was expanding my knowledge about Flask-Admin , which was vital for this project.
-              My client needed functional admin dash board with ability to add his product and with ability to track down new orders.
-              After reading some of Flask-Admin Doc. I was aware of problem with app factory. So I took a long route and decided to
-              totally change the way I was structuring the web app.
-                  <br><br>
-                  <strong>I wanted</strong> to avoid all possible collisions and keep the admin model-views separate from
-              the app __init__. Learning how to customize Flask-Admin was whole another thing , serving the right HTML to override the master.html was quiet tasking
-              especially because it was my first time doing such thing , but in the end it all turned out fine.</p>
-          </div>
-          <div class="col-sm-6 col-lg-6" data-aos="fade" data-aos-easing="ease-in" data-aos-delay="800">
+                <p>
+                    This project was started as an idea to help a friend that was having a gaming web shop, it would
+                    allow him to take orders from people outside the discord
+                    circle he had. It would allow him to track orders server by server , allow him to organize his time
+                    much more efficiently then before. The initial idea was
+                    creating a web page that allows users to submit an order of good from his shop and then he would
+                    contact his customers to proceed the order. This approach was taken
+                    because all the possible third-party payment integration options are very limited on Balkan.
+                </p>
+            </div>
+            <h1 class="text-center">Main Goal and App Factory.</h1>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6" data-aos="fade-right">
+                    <p><strong>One</strong> of my main focus points on this project was expanding my knowledge about
+                        Flask-Admin , which was vital for this project.
+                        My client needed functional admin dash board with ability to add his product and with ability to
+                        track down new orders.
+                        After reading some of Flask-Admin Doc. I was aware of problem with app factory. So I took a long
+                        route and decided to
+                        totally change the way I was structuring the web app.
+                        <br><br>
+                        <strong>I wanted</strong> to avoid all possible collisions and keep the admin model-views
+                        separate from
+                        the app __init__. Learning how to customize Flask-Admin was whole another thing , serving the
+                        right HTML to override the master.html was quiet tasking
+                        especially because it was my first time doing such thing , but in the end it all turned out
+                        fine.</p>
+                </div>
+                <div class="col-sm-6 col-lg-6" data-aos="fade" data-aos-easing="ease-in" data-aos-delay="800">
               <pre style="color: black; font-size: 80% ;">
 def create_app(confing_name):
     app = Flask(__name__)
@@ -132,22 +168,26 @@ def create_app(confing_name):
 
     return app
               </pre>
-          </div>
+                </div>
 
-      </div>
-  </div>
-      <h1 class="text-center"> Custom admin Dashboard.</h1>
-      <div class="row">
-          <div class="col-sm-6 col-lg-6" data-aos="fade-right">
-              <p> On my very first glance Flask-Admin sounded like a perfect lib. That was fairly beginner friendly so I decided to use it on the project I have finished before this one.
-              By the time I have finished one of my first projects I have noticed that the admin/dashboard index page is a blank page. <br><br>
-                  <strong>I figured</strong> out how to edit the Flask-Admin base view,
-              but that just a static HTML page , and I wanted to have functional dashboard based on updates from the users so my client could have for example a graph that contains data
-              about his orders and so on. I have created a model that tracks basic traffic over the web site , so I used it to count unique views , orders and confirmed registered users.
-              </p>
-          </div>
-          <div class="col-sm-6 col-lg-6"data-aos="fade" data-aos-easing="ease-in" data-aos-delay="800">
-       <pre style="color: black; font-size: 80% ;">
+            </div>
+        </div>
+        <h1 class="text-center"> Custom admin Dashboard.</h1>
+        <div class="row">
+            <div class="col-sm-6 col-lg-6" data-aos="fade-right">
+                <p> On my very first glance Flask-Admin sounded like a perfect lib. That was fairly beginner friendly so
+                    I decided to use it on the project I have finished before this one.
+                    By the time I have finished one of my first projects I have noticed that the admin/dashboard index
+                    page is a blank page. <br><br>
+                    <strong>I figured</strong> out how to edit the Flask-Admin base view,
+                    but that just a static HTML page , and I wanted to have functional dashboard based on updates from
+                    the users so my client could have for example a graph that contains data
+                    about his orders and so on. I have created a model that tracks basic traffic over the web site , so
+                    I used it to count unique views , orders and confirmed registered users.
+                </p>
+            </div>
+            <div class="col-sm-6 col-lg-6" data-aos="fade" data-aos-easing="ease-in" data-aos-delay="800">
+       <pre style="color: black;  ">
 class MyHomeView(AdminIndexView):
     @expose('/')
     def index(self):
@@ -174,27 +214,34 @@ class MyHomeView(AdminIndexView):
 
         return self.render('admin/admin_dash.html', week=data, completed=completed, earning=earning[0][0], user=user)
               </pre>
-          </div>
-
-      </div>
-      <div class="row">
-          <h1> What i have Learned.</h1>
-          <div class="col-sm-6 col-lg-6" style="text-align: justify; text-justify: inter-word;" data-aos="fade-right">
-              <p>
-                  To go straight to the point , I learned how to use JWS for account verification with TimedJSONWebSignatureSerializer.
-                  <br><br><strong>I wasn't</strong> paying too much attention to the server-user interaction after the registration. And even when I did so , I didn't use
-                  JWS method. It was fun and a great way to finalize your account system and actually protects your user and they're data.
-                  <br><br><strong>Also</strong> I used a very simple method to add "Admin" role to a user with the required email address. I had a lot more work with my db.Classes this time,
-                  some small things like <strong>@property</strong> for password was something I overlooked in past.
-                  <br><br>
-                  All the server-user/email scripts are handled with Flask-Email added to send_email() function that was triggered on right request was it either registration , password
-                  reset request or email reset. The only thing that would require change is using the SendGrid etc. In order to keep the notifications from the page outside the trash !
-                  <br><br>
-                  I also moved from MYSQL to postgreSQL and it feels little more mature to me and I love the PG-admin dashboard and overall control over the databases I have created on my server.
-              </p>
-          </div>
-          <div class="col-sm-6 col-lg-6" style="color: black; font-size: 80% ;" data-aos="fade" data-aos-easing="ease-in" data-aos-delay="800">
-              <pre style="color: black; font-size: 80% ;">
+            </div>
+        </div>
+        <div class="row">
+            <h1> What i have Learned.</h1>
+            <div class="col-sm-6 col-lg-6" style="text-align: justify; text-justify: inter-word;" data-aos="fade-right">
+                <p>
+                    To go straight to the point , I learned how to use JWS for account verification with
+                    TimedJSONWebSignatureSerializer.
+                    <br><br><strong>I wasn't</strong> paying too much attention to the server-user interaction after the
+                    registration. And even when I did so , I didn't use
+                    JWS method. It was fun and a great way to finalize your account system and actually protects your
+                    user and they're data.
+                    <br><br><strong>Also</strong> I used a very simple method to add "Admin" role to a user with the
+                    required email address. I had a lot more work with my db.Classes this time,
+                    some small things like <strong>@property</strong> for password was something I overlooked in past.
+                    <br><br>
+                    All the server-user/email scripts are handled with Flask-Email added to send_email() function that
+                    was triggered on right request was it either registration , password
+                    reset request or email reset. The only thing that would require change is using the SendGrid etc. In
+                    order to keep the notifications from the page outside the trash !
+                    <br><br>
+                    I also moved from MYSQL to postgreSQL and it feels little more mature to me and I love the PG-admin
+                    dashboard and overall control over the databases I have created on my server.
+                </p>
+            </div>
+            <div class="col-sm-6 col-lg-6" style="color: black;" data-aos="fade" data-aos-easing="ease-in"
+                 data-aos-delay="800">
+              <pre style="color: black;">
     class User(db.Model):
     .....................
     .....................
@@ -247,40 +294,57 @@ class MyHomeView(AdminIndexView):
         else:
             return "User"
               </pre>
-          </div>
-      </div>
-      <div class="row">
-          <h1> Conclusion and HTML Work.</h1>
-          <div class="col-sm-6 col-lg-6" data-aos="fade-right">
-              <p>
-                  Overall I am happy with the progress I made and the path I took with the changes on my APP structure in general.
-                  This feels like much healthier environment and allows my application to scale without looking like a huge mess ,
-                  avoiding all the possible circular imports with app factory is quiet satisfying because I struggled a lot with Flask-Adding
-                  on the project I had before this one. <br><br>
-                  The shop has all the required functionality and it would allow anyone who uses it to
-                  add goods and track upcoming orders which was the main goal of this app. Additionally I wanted to add custom admin messenger but it
-                  would require Pusher in order to function so I just avoided to avoid using third-party elements for now !
-              </p>
-          </div>
-          <div class="col-sm-6 col-lg-6" data-aos="fade-left" data-aos-easing="ease-in" data-aos-delay="800">
-              <p>
-              Prior this project I was still having hard time to edit Boostrap CSS and make my page have "unique" feeling , I think I created a decent
-              gap between the projects I had before this one , and I can see myself experimenting with some other CSS libraries got my eyes on tailwind.css.
-              Actually I am quiet happy with progress I made with HTML if by any chance you decide to take a look at my very first project "NBA_blog" it was just
-              bare bones from boostrap and a lot of back-end work.
-                  <br><br>
-                  And if you ever need such awesome web shop make sure you contact me :)
-              </p>
-          </div>
-      </div>
-  </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            </div>
+        </div>
+        <div class="row">
+            <h1> Conclusion and HTML Work.</h1>
+            <div class="col-sm-6 col-lg-6" data-aos="fade-right">
+                <p>
+                    Overall I am happy with the progress I made and the path I took with the changes on my APP structure
+                    in general.
+                    This feels like much healthier environment and allows my application to scale without looking like a
+                    huge mess ,
+                    avoiding all the possible circular imports with app factory is quiet satisfying because I struggled
+                    a lot with Flask-Adding
+                    on the project I had before this one. <br><br>
+                    The shop has all the required functionality and it would allow anyone who uses it to
+                    add goods and track upcoming orders which was the main goal of this app. Additionally I wanted to
+                    add custom admin messenger but it
+                    would require Pusher in order to function so I just avoided to avoid using third-party elements for
+                    now !
+                </p>
+            </div>
+            <div class="col-sm-6 col-lg-6" data-aos="fade-left" data-aos-easing="ease-in" data-aos-delay="800">
+                <p>
+                    Prior this project I was still having hard time to edit Boostrap CSS and make my page have "unique"
+                    feeling , I think I created a decent
+                    gap between the projects I had before this one , and I can see myself experimenting with some other
+                    CSS libraries got my eyes on tailwind.css.
+                    Actually I am quiet happy with progress I made with HTML if by any chance you decide to take a look
+                    at my very first project "NBA_blog" it was just
+                    bare bones from boostrap and a lot of back-end work.
+                    <br><br>
+                    And if you ever need such awesome web shop make sure you contact me :)
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/plugins/CSSRulePlugin.min.js'></script>
+<script src="/static/js/index.js"></script>
 <script>
-  AOS.init();
+    AOS.init();
 </script>
 </body>
 </html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Dario Klopic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- STYLE CSS -->
+
+    <link rel="stylesheet" href="static/css/style2.css">
+    <link rel="stylesheet" href="static/css/animate.css">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <!-- Navigation -->
+</head>
+<body onload="transition()">
+<body>
+<div class="loader">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+    <div class="bar5"></div>
+    <div class="bar6"></div>
+
+</div>
+<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
+    <div class="navbar-toggler animate">
+        <span class="menu-icon"></span>
+    </div>
+    <ul id='myNavbar' class="navbar-menu animate">
+        <li>
+            <a href="{{url_for('index')}}" class="animate">
+                <span class="desc animate"> Home </span>
+                <i class="fas fa-home"></i>
+            </a>
+        </li>
+        <li>
+            <a href="{{url_for('about_me')}}" class="animate">
+                <span class="desc animate"> About Me </span>
+                <i class="fas fa-user"></i></span>
+            </a>
+        </li>
+        <li>
+            <a href="{{url_for('projects')}}" class="animate">
+                <span class="desc animate"> Project/Contact </span>
+                <i class="fas fa-file-signature"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <div class="-content -index" style="height: 90vh;">
+        <div class="container any" id="projects">
+            <div class="row">
+                <h1 class="text-ceter">Finished Projects.</h1>
+                <hr>
+                <div class="col-lg-4 col-sm-12">
+                    <a href="{{url_for('project1')}}" style="text-decoration: none; color: black;">
+                        <div class="box box1 j">
+                            <p> Web shop with login/register authorization system , product list , cart and all
+                                admin/dashboard functionality to track the registration of users , confirmation of
+                                orders etc...</p>
+                            <h2>E Commerce</h2>
+                        </div>
+                    </a>
+                    <div class="bg"></div>
+                </div>
+                <div class="col-lg-4 col-sm-12 d">
+                    <a href="{{url_for('project2')}}" style="text-decoration: none; color: black;">
+                        <div class="box box1 ">
+                            <p> Web shop with login/register authorization system , product list , cart and all
+                                admin/dashboard functionality to track the registration of users , confirmation of
+                                orders etc...</p>
+                            <h2>E Commerce</h2>
+                        </div>
+                    </a>
+                    <div class="bg"></div>
+                </div>
+                <div class="col-lg-4 col-sm-12 t">
+                    <a href="{{url_for('project3')}}" style="text-decoration: none; color: black;">
+                        <div class="box box3">
+                            <p> This was my first project with Flask framework , it includes selenium scripts to feed
+                                the database every 24 hours in order to keep the content live. A chat room built
+                                with socketIo...</p>
+                            <h2>Selenium Based App</h2>
+                        </div>
+                    </a>
+                    <div class="bg"></div>
+                </div>
+            </div>
+            <h2 class="text-center" style="opacity: 0.8;">Click to Read More...</h2>
+        </div>
+
+        <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold" style="color: var(--third-bg-color);">Contact Me
+                            and Lets work Together</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-5">
+                            <i class="fas fa-user prefix grey-text" style="color: var(--third-bg-color);"></i>
+                            <pre style="color: black; font-size: 0.7rem;">
+          Full Name: Dario Klopic
+          Location: Gradacac, Bosnia and Herzegovina
+          Age : 28
+          </pre>
+                        </div>
+
+                        <div class="md-form mb-5">
+                            <i class="fas fa-envelope prefix grey-text" style="color: var(--third-bg-color);"></i>
+                            <pre style="color: black; font-size: 0.7rem;">
+          Email: darioklopic@gmail.com
+          </pre>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalContactForm"
+               style="background: var(--third-bg-color);">Contact Me</a>
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://darioklopic.com/"> darioklopic.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    </div>
+</main>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="static/js/three.min.js"></script>
+<script src="static/js/TweenMax.min.js"></script>
+<script src="static/js/hover-effect.umd.js"></script>
+<script src="static/js/hover.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/plugins/CSSRulePlugin.min.js'></script>
+
+<script src="/static/js/index.js"></script>
+<script>
+    var myAnimation = new hoverEffect({
+        parent: document.querySelector('.glitch'),
+        intensity1: 1,
+        intesivity2: 2,
+        speedIn: 1,
+        speedOut: 1,
+        image1: '/static/images/tri.jpg',
+        image2: '/static/images/tridva.jpg',
+        displacementImage: '/static/img/displacement/6.jpg'
+    });
+    new hoverEffect({
+        parent: document.querySelector('.glitch2'),
+        intensity1: 0.1,
+        intensity2: 0.1,
+        angle2: Math.PI / 2,
+        image1: '/static/img/shop1.jpg',
+        image2: '/static/img/project1.png',
+        displacementImage: '/static/img/displacement/6.jpg'
+    });
+</script>
+<script>
+    $(function () {
+        if (window.location == window.parent.location) {
+            $('#fullscreen').html('<span class="glyphicon glyphicon-resize-small"></span>');
+            $('#fullscreen').attr('href', 'http://bootsnipp.com/mouse0270/snippets/PbDb5');
+            $('#fullscreen').attr('title', 'Back To Bootsnipp');
+        }
+        $('#fullscreen').on('click', function (event) {
+            event.preventDefault();
+            window.parent.location = $('#fullscreen').attr('href');
+        });
+        $('#fullscreen').tooltip();
+
+        $('.navbar-toggler').on('click', function (event) {
+            event.preventDefault();
+            $(this).closest('.navbar-minimal').toggleClass('open');
+        })
+    });
+</script>
+</body>
+</html>

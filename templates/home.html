@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Dario Klopic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- STYLE CSS -->
+
+    <link rel="stylesheet" href="static/css/style2.css">
+    <link rel="stylesheet" href="static/css/animate.css">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <!-- Navigation -->
+</head>
+<body onload="transition()">
+<div class="loader">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+    <div class="bar5"></div>
+    <div class="bar6"></div>
+</div>
+<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
+    <div class="navbar-toggler animate">
+        <span class="menu-icon"></span>
+    </div>
+    <ul id='myNavbar' class="navbar-menu animate">
+        <li>
+            <a href="{{url_for('index')}}" class="animate">
+                <span class="desc animate"> Home </span>
+                <i class="fas fa-home"></i>
+            </a>
+        </li>
+        <li>
+            <a href="{{url_for('about_me')}}" class="animate">
+                <span class="desc animate"> About Me </span>
+                <i class="fas fa-user"></i></span>
+            </a>
+        </li>
+        <li>
+            <a href="{{url_for('projects')}}" class="animate">
+                <span class="desc animate"> Project/Contact </span>
+                <i class="fas fa-file-signature"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <div class="-content -index">
+        <section id="landing">
+            <div class="container-fluid p-0 landc">
+                <div class="row no-gutters">
+                    <div class="col-sm-6 img1 grid">
+                        <div class="col-12 col-sm-12 col-lg-12 img3 glitch">
+                        </div>
+                        <div class="col-lg-12 img4"></div>
+                        <div class="col-12 img5">
+                            <hr class="hr1">
+                            <pre>
+            @app.route('/index')
+            def index():
+            return render_template('index.html')
+        </pre>
+                        </div>
+                        <div class="col-12 img6">
+                        <pre>
+            if __name__ == '__main__':
+                     app.run(debug=True)
+        </pre>
+                            <hr>
+                        </div>
+                        <div class="col-12 img7"></div>
+                        <div class="col-12 img8">
+                            <hr>
+                            <pre>
+                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi fuga odit officia quos. Beatae consectetur dolores esse inventore labore laboriosam numquam praesentium quaerat quas rem. Amet inventore minima repellat.</span><span>Aliquid aut autem delectus deleniti, earum eius ex facere facilis hic illo iste labore neque nulla odit reprehenderit ullam veritatis. Dolore eius enim fugiat illo laboriosam nemo tempora vel voluptas.</span><span>A aperiam asperiores aut autem commodi cum, dolor doloremque doloribus eius enim et eveniet illum itaque molestiae nostrum obcaecati placeat quaerat quasi qui quis reiciendis tempora tempore tenetur unde voluptas?</span><span>Animi commodi deserunt distinctio id pariatur, quam quis! A ab amet asperiores blanditiis consectetur eius excepturi, facere iusto laudantium, modi molestias perferendis qui quibusdam quo rem reprehenderit tempore veniam voluptates!</span><span>Aliquid aut consequuntur distinctio eius eum impedit odit quo similique ullam vero? Beatae commodi, distinctio ducimus eaque, laborum minus numquam omnis possimus praesentium quam quas quisquam repellat saepe veniam voluptate.</span><span>Accusantium asperiores beatae dicta ea id illo in laboriosam, magnam numquam porro quas, quasi quos rem tempore voluptates. Aliquid consequatur deleniti eligendi iusto magni molestiae mollitia quasi reprehenderit suscipit voluptatum.</span><span>A aliquam dignissimos dolore illum ipsa ipsam, itaque maiores natus neque nesciunt numquam, pariatur rem tempore, totam voluptatum? Ab amet aspernatur deserunt harum maiores quibusdam quod tempore ut voluptate voluptates.</span><span>A animi architecto beatae dolor error fugit magni modi, natus necessitatibus neque nesciunt nobis nostrum obcaecati omnis praesentium quae quod reprehenderit sequi sint sunt tempora ullam voluptatem voluptatum? Maiores, odio.</span><span>Ab accusamus aperiam beatae dolor enim ex exercitationem facere, inventore, non numquam, ratione rem repellat voluptatibus? Alias aliquid aut, eos inventore ipsam maiores quam quia quibusdam, ratione, saepe sapiente velit.</span><span>Aut dolorem dolores eaque fugit magnam nemo quod reprehenderit voluptatem. Cum debitis deserunt dolorem dolores eius esse excepturi, ipsam, perspiciatis quae quas, recusandae rerum sunt voluptatum! Aut id perferendis sint.</span><span>Aliquid est harum inventore minus modi tempora. Dignissimos doloremque doloribus eaque explicabo laudantium magni obcaecati repellat sapiente sed ut?
+                       Asperiores, consectetur culpa dignissimos esse magni nulla obcaecati officiis soluta sunt.</span><span>A accusamus architecto consequatur deserunt dolor dolorum ducimus et fugiat libero modi molestiae molestias mollitia natus, necessitatibus nihil nisi odit porro possimus praesentium quae qui quis quos, similique sunt, voluptas.</span>
+                   </pre>
+                        </div>
+                        <div class="col-12 img9">
+                            <hr>
+                        </div>
+                        <div class="col-12 img10"></div>
+
+                        <div class="col-12 img-bg">
+                            <img src="/static/images/backbg1.png" clas="img-fluid">
+                        </div>
+
+                        <div class="col-12 cube2"></div>
+                    </div>
+                    <div class="col-sm-6 img2 grid1">
+                        <div class="col-12 r_img1">
+                            <h1 class="text-center">Dario Klopic.</h1>
+                        </div>
+                        <div class="col-12 col-md-12 r_img2">
+
+                        </div>
+                        <div class="col-12 col-md-12 r_img3"></div>
+                        <div class="r_img5"></div>
+                        <div class="col-sm-12 minibio">
+                            <p>Bosnian based 28 y/old web developer. I am committed to taking all efforts to make this a
+                                great experience for everyone that engage with me. Honest and hard work is my policy ,
+                                client satisfaction and good quality of work are my top priorities.
+                                <br>Visit About me section , for my skills info and more Bio details.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small blue" style="margin-top: -10rem;">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://darioklopic.com/"> darioklopic.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="static/js/three.min.js"></script>
+<script src="static/js/TweenMax.min.js"></script>
+<script src="static/js/hover-effect.umd.js"></script>
+<script src="static/js/hover.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/plugins/CSSRulePlugin.min.js'></script>
+
+<script src="/static/js/index.js"></script>
+<script>
+    var myAnimation = new hoverEffect({
+        parent: document.querySelector('.glitch'),
+        intensity1: 1,
+        intesivity2: 2,
+        speedIn: 1,
+        speedOut: 1,
+        image1: '/static/images/tri.jpg',
+        image2: '/static/images/tridva.jpg',
+        displacementImage: '/static/img/displacement/6.jpg'
+    });
+    new hoverEffect({
+        parent: document.querySelector('.glitch2'),
+        intensity1: 0.1,
+        intensity2: 0.1,
+        angle2: Math.PI / 2,
+        image1: '/static/img/shop1.jpg',
+        image2: '/static/img/project1.png',
+        displacementImage: '/static/img/displacement/6.jpg'
+    });
+</script>
+<script>
+    $(function () {
+        if (window.location == window.parent.location) {
+            $('#fullscreen').html('<span class="glyphicon glyphicon-resize-small"></span>');
+            $('#fullscreen').attr('href', 'http://bootsnipp.com/mouse0270/snippets/PbDb5');
+            $('#fullscreen').attr('title', 'Back To Bootsnipp');
+        }
+        $('#fullscreen').on('click', function (event) {
+            event.preventDefault();
+            window.parent.location = $('#fullscreen').attr('href');
+        });
+        $('#fullscreen').tooltip();
+
+        $('.navbar-toggler').on('click', function (event) {
+            event.preventDefault();
+            $(this).closest('.navbar-minimal').toggleClass('open');
+        })
+    });
+</script>
+</body>
+</html>

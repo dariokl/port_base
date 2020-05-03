@@ -1,0 +1,121 @@
+@-webkit-keyframes delay {
+    0%, 60%, 100% {
+        transform: initial;
+    }
+
+    30% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes delay {
+    0%, 60%, 100% {
+        transform: initial;
+    }
+
+    30% {
+        transform: translateY(-15px);
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    /*&.is-changing{
+      &:before,
+      &:after{
+        transform: translateY(0);
+      }
+    }*/
+}
+
+body:before, body:after {
+    content: '';
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    background: var(--third-bg-color);
+    z-index: 1;
+}
+
+body:before {
+    top: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+body:after {
+    bottom: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+
+.loader {
+    margin: 0 auto;
+    width: 60px;
+    height: 50px;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 500;
+    opacity: 0;
+}
+
+.loader > div {
+    height: 30%;
+    width: 8px;
+    display: inline-block;
+    float: left;
+    margin-left: 2px;
+    -webkit-animation: delay 0.8s infinite ease-in-out;
+    animation: delay 0.8s infinite ease-in-out;
+}
+
+.loader .bar1 {
+    background-color: #C19AB7;
+}
+
+.loader .bar2 {
+    background-color: #9C95DC;
+    -webkit-animation-delay: -0.7s;
+    animation-delay: -0.7s;
+}
+
+.loader .bar3 {
+    background-color: #478559;
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+.loader .bar4 {
+    background-color: #161748;
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+
+.loader .bar5 {
+    background-color: #f95d9b;
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+}
+
+.loader .bar6 {
+    background-color: #39a0ca;
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+}
+
+main .tree {
+    text-align: left;
+}
+
+main {
+    height: 90vh;
+}
+
+

@@ -6,97 +6,126 @@
     <title>Dario Klopic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- MATERIAL DESIGN ICONIC FONT -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="static/css/style2.css">
-    <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body style="overflow: visible;">
-  <div class="row">
-    <div class="col-lg-12" style="background:var(--main-bg-color); box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 8px 8px rgba(0,0,0,0.11),0 16px 16px rgba(0,0,0,0.11),0 32px 32px rgba(0,0,0,0.11);" >
-        <div class="container">
-              <h1 class="text-ceter">NBA App based on Selenium</h1>
-          <hr>
-      <p style="color: white;">This was my very first Flask project. It was just 20 days after I finished learning/reading/practicing about flask.
-      Reading the suggestions from other programmers , everyone would suggest to automate something that you do each and every day. For me that was checking
-      on NBA stats after games would finish. So I decided to create a small web app , that would have live feeds based on scraped data. It would contain all the
-      statistic data for every player in the league , charts.js chart to compare player performance and even a small live chat "hub" based on socketIo.
-      <br><br>
-          Visit my <a href="https://github.com/dariokl"> GitHub</a> to check the source code.
-      </p>
-            <i class="fa fa-facebook fa-3x"></i>
-    </div>
-        </div>
-  </div>
-
-<div class="row">
-    <div class="container">
-    <div class="col-lg-12 col-sm-12 col-12" style="background:var(--third-bg-color); margin-top:-5rem;">
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top: 3rem;">
-  <div class="carousel-inner active" style="margin-top: 3rem;">
-    <div class="carousel-item active" style="margin-top: 3rem;">
-      <img class="d-block w-100 h-90" src="/static/img/project3/1.png" alt="First slide">
-    </div>
-    <div class="carousel-item" style="margin-top: 3rem;">
-      <img class="d-block w-100 h-90" src="/static/img/project3/2.png" alt="Second slide">
-    </div>
-    <div class="carousel-item" style="margin-top: 3rem;">
-      <img class="d-block w-100 h-90" src="/static/img/project3/3.png" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+<body onload="transition()">
+<div class="loader">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+    <div class="bar5"></div>
+    <div class="bar6"></div>
 </div>
-        <hr >
+<main>
+    <div class="-content -index">
+        <div class="row">
+            <div class="col-lg-12"
+                 style="background:var(--main-bg-color); box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 8px 8px rgba(0,0,0,0.11),0 16px 16px rgba(0,0,0,0.11),0 32px 32px rgba(0,0,0,0.11);">
+                <div class="container">
+                    <h1 class="text-ceter">NBA App based on Selenium</h1>
+                    <hr>
+                    <p style="color: white;">This was my very first Flask project. It was just 20 days after I finished
+                        learning/reading/practicing about flask.
+                        Reading the suggestions from other programmers , everyone would suggest to automate something
+                        that you do each and every day. For me that was checking
+                        on NBA stats after games would finish. So I decided to create a small web app , that would have
+                        live feeds based on scraped data. It would contain all the
+                        statistic data for every player in the league , charts.js chart to compare player performance
+                        and even a small live chat "hub" based on socketIo.
+                        <br><br>
+                        Visit my <a href="https://github.com/dariokl"> GitHub</a> to check the source code.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="col-lg-12 col-sm-12 col-12" style="background:var(--third-bg-color); margin-top:-5rem;">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"
+                         style="margin-top: 3rem;">
+                        <div class="carousel-inner active" style="margin-top: 3rem;">
+                            <div class="carousel-item active" style="margin-top: 3rem;">
+                                <img class="d-block w-100 h-90" src="/static/img/project3/1.png" alt="First slide">
+                            </div>
+                            <div class="carousel-item" style="margin-top: 3rem;">
+                                <img class="d-block w-100 h-90" src="/static/img/project3/2.png" alt="Second slide">
+                            </div>
+                            <div class="carousel-item" style="margin-top: 3rem;">
+                                <img class="d-block w-100 h-90" src="/static/img/project3/3.png" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                           data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                           data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
-  </div>
- <a href="{{url_for('index')}}" class="previous sticky"  style="text-decoration: none;">&#8249</a>
-  <div class="section"></div>
-  <div class="container">
-      <hr>
-      <h1 class="text-center"> Description of project. </h1>
-      <hr>
-  <div class="row">
-      <div class="col-sm-6 col-lg-6 broke1" data-aos="fade-right"  data-aos-easing="ease-in-out">
-          <p>
-              This web app contains , registration and login that is used to chat with online users on the app . I was using socketIo to create a chat room inside one of my views.
-              That was the main reason why I created login and register system. The landing page would contain the last night scores based on the results that would be scraped off
-              some of portals using bs4/selenium. I used youtubeApi to get the newest nba-related videos on the channel that I was visiting the most.
-          </p>
+    <a href="{{url_for('index')}}" class="previous sticky" style="text-decoration: none;">&#8249</a>
+    <div class="section"></div>
+    <div class="container">
+        <hr>
+        <h1 class="text-center"> Description of project. </h1>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6 col-lg-6 broke1" data-aos="fade-right" data-aos-easing="ease-in-out">
+                <p>
+                    This web app contains , registration and login that is used to chat with online users on the app . I
+                    was using socketIo to create a chat room inside one of my views.
+                    That was the main reason why I created login and register system. The landing page would contain the
+                    last night scores based on the results that would be scraped off
+                    some of portals using bs4/selenium. I used youtubeApi to get the newest nba-related videos on the
+                    channel that I was visiting the most.
+                </p>
 
-      </div>
+            </div>
             <div class="col-sm-6 col-lg-6" data-aos="fade-left" data-aos-easing="ease-in" data-aos-delay="800">
-          <p>
-              One of key features of this web app is the live news feed about the players , all the statistic updates based on performance from game to game , injury news feed etc.
-              The app contains a graph that would compare the statistic of players performance in current year. Also the web app contained a "search" box to read the most recent
-              r/nba reddit posts about the player so as the players individual statistic board.
+                <p>
+                    One of key features of this web app is the live news feed about the players , all the statistic
+                    updates based on performance from game to game , injury news feed etc.
+                    The app contains a graph that would compare the statistic of players performance in current year.
+                    Also the web app contained a "search" box to read the most recent
+                    r/nba reddit posts about the player so as the players individual statistic board.
 
-          </p>
-      </div>
-      <h1 class="text-center">Main Goal and Selenium.</h1>
-          <hr>
-      <div class="row">
-          <div class="col-sm-6 col-lg-6" data-aos="fade-right">
-              <p>
-                  <strong>Main goal</strong> on this application was to feed my database with fresh news each 24 hours, since I could not find any free API service that would contain similar data,
-              I used selenium and bs4 to extract required data from the web page to the database. All statistic changes would be tracked and updated every day , also there was a
-              route that contained fresh data about player injury updates.
-              <br><br>
-              <strong>Revolving</strong> around the Selenium and bs/4 required some celery work to update the database every 24 hours. As a beginner I struggled a lot with integration of Chart.js.
-              But in the end I managed to create the graph comparison between the players.
-              </p>
-          </div>
-          <div class="col-sm-6 col-lg-6" data-aos="fade" data-aos-delay="800" ata-aos-easing="ease-in" >
+                </p>
+            </div>
+            <h1 class="text-center">Main Goal and Selenium.</h1>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6" data-aos="fade-right">
+                    <p>
+                        <strong>Main goal</strong> on this application was to feed my database with fresh news each 24
+                        hours, since I could not find any free API service that would contain similar data,
+                        I used selenium and bs4 to extract required data from the web page to the database. All
+                        statistic changes would be tracked and updated every day , also there was a
+                        route that contained fresh data about player injury updates.
+                        <br><br>
+                        <strong>Revolving</strong> around the Selenium and bs/4 required some celery work to update the
+                        database every 24 hours. As a beginner I struggled a lot with integration of Chart.js.
+                        But in the end I managed to create the graph comparison between the players.
+                    </p>
+                </div>
+                <div class="col-sm-6 col-lg-6" data-aos="fade" data-aos-delay="800" ata-aos-easing="ease-in">
               <pre style="color: black; font-size: 80% ;">
     browser.get('https://www.rotoworld.com/sports/nba/basketball')
 
@@ -128,26 +157,31 @@
 
     return redirect(url_for('core.news'))
               </pre>
-          </div>
+                </div>
 
-      </div>
-  </div>
-      <h1 class="text-center"> SocketIo and Chat Hub.</h1>
-      <div class="row">
-          <div class="col-sm-6 col-lg-6" data-aos="fade-right">
-              <p>
-                  <strong>At</strong> this time I didn't know much about front end work after a while I figured out I could use flask-socketIo to achieve the chat hub, functionality.
-                  But the JavaScript part was rather than confusing to me and this was the part of application I was stucked the most.
-                  <br><br>
-                  <strong>After</strong> spending quiet a few days , reading
-                  and watching tutorials I figured out how to create a chat room , even tough after the deployment on Heroku the chat room was working I'm not quiet sure how much
-                  of traffic I could actually handle.
-                  <br><br>
-                  <strong>This</strong> part of project helped me a lot to get rid of the "I hate JS" mind set and from this point I was much more confident to work with JQuery which gives the required
-                  functionality on the front-end part of my apps. On the back end I used emit method so all the messages get displayed once they are sent from registered user.
-              </p>
-          </div>
-          <div class="col-sm-6 col-lg-6" data-aos="fade" data-aos-delay="800" ata-aos-easing="ease-in">
+            </div>
+        </div>
+        <h1 class="text-center"> SocketIo and Chat Hub.</h1>
+        <div class="row">
+            <div class="col-sm-6 col-lg-6" data-aos="fade-right">
+                <p>
+                    <strong>At</strong> this time I didn't know much about front end work after a while I figured out I
+                    could use flask-socketIo to achieve the chat hub, functionality.
+                    But the JavaScript part was rather than confusing to me and this was the part of application I was
+                    stucked the most.
+                    <br><br>
+                    <strong>After</strong> spending quiet a few days , reading
+                    and watching tutorials I figured out how to create a chat room , even tough after the deployment on
+                    Heroku the chat room was working I'm not quiet sure how much
+                    of traffic I could actually handle.
+                    <br><br>
+                    <strong>This</strong> part of project helped me a lot to get rid of the "I hate JS" mind set and
+                    from this point I was much more confident to work with JQuery which gives the required
+                    functionality on the front-end part of my apps. On the back end I used emit method so all the
+                    messages get displayed once they are sent from registered user.
+                </p>
+            </div>
+            <div class="col-sm-6 col-lg-6" data-aos="fade" data-aos-delay="800" ata-aos-easing="ease-in">
        <pre style="color: black; font-size: 80% ;">
 const username= `{{username}}`;
 var socket = io();
@@ -185,38 +219,50 @@ document.querySelector('#send_message').onclick = () =>{
   socket.send({'msg' : document.querySelector('#user_message').value,
   'username' : username});
 };
-
               </pre>
-          </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1> What i have Learned and Conclusion.</h1>
+            <div class="col-sm-6 col-lg-6" style="text-align: justify; text-justify: inter-word;">
+                <p>
+                    I could write pages of what I have learn , due to the fact that this was my very first Flask project
+                    , I have learned how to create db Models , how to
+                    insert bulk data inside the database tables. All the scraping work allowed me to understand the
+                    database models relationship , I had a chance to
+                    interact with JS and get familiar with some basic front-end concepts like making an Ajax call or
+                    working with SocketIo.
+                </p>
+            </div>
+            <div class="col-sm-6 col-lg-6" style="color: black; font-size: 80% ;" >
+                <p>
+                    If you decide to take a peak on this code on git hub please be aware that I had 3 moths of coding
+                    experience , the web app structure is nothing like it should be
+                    I even left the migration folder on the git respo, also there is almost next to none CSS work
+                    because I didn't know any. So in order for this app to be actually
+                    fully functional and ready for deployment it would take some serious time to rewrite most of my app
+                    logic.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
 
-      </div>
-      <div class="row">
-          <h1> What i have Learned and Conclusion.</h1>
-          <div class="col-sm-6 col-lg-6" style="text-align: justify; text-justify: inter-word;" data-aos="fade-right">
-              <p>
-                I could write pages of what I have learn , due to the fact that this was my very first Flask project , I have learned how to create db Models , how to
-                  insert bulk data inside the database tables. All the scraping work allowed me to understand the database models relationship , I had a chance to
-                  interact with JS and get familiar with some basic front-end concepts like making an Ajax call or working with SocketIo.
-              </p>
-          </div>
-          <div class="col-sm-6 col-lg-6" style="color: black; font-size: 80% ;" data-aos="fade" data-aos-delay="800" ata-aos-easing="ease-in">
-              <p>
-              If you decide to take a peak on this code on git hub please be aware that I had 3 moths of coding experience , the web app structure is nothing like it should be
-              I even left the migration folder on the git respo, also there is almost next to none CSS work because I didn't know any. So in order for this app to be actually
-              fully functional and ready for deployment it would take some serious time to rewrite most of my app logic.
-              </p>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/plugins/CSSRulePlugin.min.js'></script>
+
+<script src="/static/js/index.js"></script>
 <script>
-  AOS.init();
+    AOS.init();
 </script>
 </body>
 </html>

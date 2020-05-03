@@ -1,6 +1,6 @@
 /* :root and fonts */
 @import url(https://fonts.googleapis.com/css?family=Cinzel);
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro);
 :root {
 	--main-bg-color: #18181E;
 	--second-bg-color: #E1E2E2;
@@ -33,7 +33,7 @@ hr{
 	background: var(--second-bg-color);
 }
 p {
-	font: 1.3rem/2 'Josefin Slab', serif;
+	font: 1.3rem/2 'Maven Pro', sans-serif;
 	margin: 0 0 2em 0;
 }
 .container-fluid {
@@ -49,12 +49,12 @@ p {
 /* Style of left part of first section #landing it includes styles for all img_divs and handle the glitch part of js */
 .img1 {
 	background: var(--main-bg-color);
-	height: 90vh;
+	height: 10vh;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 8px 8px rgba(0,0,0,0.11),0 16px 16px rgba(0,0,0,0.11),0 32px 32px rgba(0,0,0,0.11);
 }
 .grid {
 	display:grid;
-	height: 100%;
+	height: 90%;
 	overflow: auto;
 	grid-template-columns: 1fr 1fr 6fr 1fr 1fr 10fr 10fr;
 	grid-template-rows: 30px 100px 200px 100px 15px 450px 15px;
@@ -84,11 +84,13 @@ p {
 	overflow: hidden;
 	grid-column: 4 / span 7;
 	grid-row: 2 / span 1;
+	text-align: left !important;
 }
 .img6 {
 	margin-top: 20rem;
 	grid-column: 1 / span 6;
 	grid-row: 5/ span 1;
+	text-align: left !important;
 }
 .img6 pre {
 	margin-top: 2rem;
@@ -313,14 +315,11 @@ p {
 	font-size: 0.8rem;
 	color: var(--fo-bg-color);
 }
-.bg-success{
-	background-color: var(--main-bg-color) !important;
-}
-
 
 #projects h1{
     margin-left: 10rem;
 }
+
 
 @media only screen
   and (max-device-width: 768px)
@@ -557,6 +556,10 @@ p {
 
 	}
 
+	.about_5{
+		font-size: 50%;
+	}
+
 	.about_6{
 		margin-left: -2rem;
 		margin-top:10rem;
@@ -646,7 +649,6 @@ p {
 
 .tree {
 	display: inline-block;
-	background: white;
 	margin-top: 20px;
 	padding: 30px;
 	font-family: 'Roboto Mono', monospace;
@@ -662,7 +664,7 @@ p {
 	color: #f21f10;
 }
 .tree ul {
-	padding-left: 5px;
+	padding-left: 0px;
 	list-style: none;
 }
 .tree ul li {
@@ -711,7 +713,7 @@ p {
   overflow: hidden;
   margin-bottom: 50px;
   transition: all 0.5s ease-in;
-  z-index: 2;
+
   box-sizing: border-box;
   padding: 30px;
   box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3);

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Dario Klopic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- STYLE CSS -->
+
+    <link rel="stylesheet" href="static/css/style2.css">
+    <link rel="stylesheet" href="static/css/animate.css">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+    <!-- Navigation -->
+</head>
+<body>
+<body onload="transition()">
+<div class="loader">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+    <div class="bar5"></div>
+    <div class="bar6"></div>
+</div>
+<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
+    <div class="navbar-toggler animate">
+        <span class="menu-icon"></span>
+    </div>
+    <ul id='myNavbar' class="navbar-menu animate">
+        <li>
+            <a href="{{url_for('index')}}" class="animate">
+                <span class="desc animate"> Home </span>
+                <i class="fas fa-home"></i>
+            </a>
+        </li>
+        <li>
+            <a href="{{url_for('about_me')}}" class="animate">
+                <span class="desc animate"> About Me </span>
+                <i class="fas fa-user"></i></span>
+            </a>
+        </li>
+        <li>
+            <a href="{{url_for('projects')}}" class="animate">
+                <span class="desc animate"> Project/Contact </span>
+                <i class="fas fa-file-signature"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <div class="-content -index">
+        <section id="about">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-lg-12 about_1 grid2">
+                        <div class="col-sm-8 col-md-8 about_2">
+                            <hr>
+                        </div>
+                        <div class="col-12 col-sm-12 col-lg-12  about_3"></div>
+                        <div class="col-sm-8  about_4">
+                            <h1> About me. </h1>
+                        </div>
+                        <div class="col-sm-12 col-md-12 about_5">
+                            <p>Hello , my name is Dario. I am born and raised in Bosnia. Currently looking for a way to
+                                dive into Web Development. I am bachelor of law - Faculty of Law, University of Mostar.
+                                My web development journey started with Python but i am opened forward to become a full
+                                stack web developer. Make sure you check out my gitHub and finished projects show-case
+                                on my web page.
+                                I am passionate about my craft , so i look forward to all future opportunities. If by
+                                any means our paths cross i will sure make that a best possible experience.
+                                <br><br>
+                                <span class="removeit">I use my free time for my photopgraphy hobby , so i have quiet a lot of experience with photoshop that can be added as one of my techical skills.</span>
+                            </p>
+                        </div>
+                        <div class="col-sm-8 about_6">
+                            <p class="text-center">Social media links</p>
+                            <div class="d-flex justify-content-center">
+                                <a href="https://github.com/dariokl" style="text-decoration: none; color:black;"><i
+                                        class="fab fa-git-square"></i></a>
+                                <a href="https://www.instagram.com/dariok_____/"
+                                   style="text-decoration: none; color:black;"><i
+                                        class="fab fa-instagram-square"></i></a>
+                                <a href="https://500px.com/dariok" style="text-decoration: none; color:black;"><i
+                                        class="fab fa-500px"></i></a>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-sm-8 about_7">
+                            <h1>. technical Skills</h1>
+                            <div class="col-sm-6 tree">
+                                <i class="fas fa-cogs" style="color: var(--third-bg-color);"></i>
+                                <ul>
+                                    <li><i class="fab fa-python" style="color: var(--third-bg-color);"></i> Python
+                                        <ul>
+                                            <li><i class="fa fa-folder-open"></i> Back End Web Development
+                                                <ul>
+                                                    <li><i class="fa fa-folder-open"></i> Flask
+
+                                                    <li><i class="fas fa-database"
+                                                           style="color: var(--third-bg-color);"></i>SQL
+                                                        <ul>
+                                                            <li>
+                                                                <i class="fa fa-code"></i>MySQL
+                                                            </li>
+                                                            <li>
+                                                                <i class="fa fa-code"></i>PostgreSQL
+                                                            </li>
+                                                            <li>
+                                                                <i class="fa fa-code"></i>SQLite
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><i class="fa fa-folder-open"></i> Scraping
+                                                <ul>
+                                                    <li>
+                                                        <ul>
+                                                            <li><i class="fa fa-code"> </i> Scrapy</li>
+                                                            <li><i class="fa fa-code"> </i> Selenium</li>
+                                                            <li><i class="fa fa-code"> </i> BeautifulSoup</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    </li>
+                                    <li><i class="far fa-window-restore" style="color: var(--third-bg-color);"></i>
+                                        Front End Skills
+                                        <ul>
+                                            <li><i class="fab fa-html5"></i>Font End skills</li>
+                                            <li><i class="fab fa-css3-alt"></i>CSS3</li>
+                                            <li><i class="fab fa-bootstrap"></i> Boostrap 3 / 4</li>
+                                            <li><i class="fa fa-code"></i>JQuery</li>
+                                        </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </div>
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://darioklopic.com/"> darioklopic.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    </div>
+</main>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="static/js/three.min.js"></script>
+<script src="static/js/TweenMax.min.js"></script>
+<script src="static/js/hover-effect.umd.js"></script>
+<script src="static/js/hover.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/plugins/CSSRulePlugin.min.js'></script>
+
+<script src="/static/js/index.js"></script>
+<script>
+    var myAnimation = new hoverEffect({
+        parent: document.querySelector('.glitch'),
+        intensity1: 1,
+        intesivity2: 2,
+        speedIn: 1,
+        speedOut: 1,
+        image1: '/static/images/tri.jpg',
+        image2: '/static/images/tridva.jpg',
+        displacementImage: '/static/img/displacement/6.jpg'
+    });
+    new hoverEffect({
+        parent: document.querySelector('.glitch2'),
+        intensity1: 0.1,
+        intensity2: 0.1,
+        angle2: Math.PI / 2,
+        image1: '/static/img/shop1.jpg',
+        image2: '/static/img/project1.png',
+        displacementImage: '/static/img/displacement/6.jpg'
+    });
+</script>
+<script>
+    $(function () {
+        if (window.location == window.parent.location) {
+            $('#fullscreen').html('<span class="glyphicon glyphicon-resize-small"></span>');
+            $('#fullscreen').attr('href', 'http://bootsnipp.com/mouse0270/snippets/PbDb5');
+            $('#fullscreen').attr('title', 'Back To Bootsnipp');
+        }
+        $('#fullscreen').on('click', function (event) {
+            event.preventDefault();
+            window.parent.location = $('#fullscreen').attr('href');
+        });
+        $('#fullscreen').tooltip();
+
+        $('.navbar-toggler').on('click', function (event) {
+            event.preventDefault();
+            $(this).closest('.navbar-minimal').toggleClass('open');
+        })
+    });
+</script>
+</body>
+</html>
