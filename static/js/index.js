@@ -1,5 +1,5 @@
 // play on load for gallery view
-setTimeout(transition, 1000);
+setTimeout(transition, 0);
 
 
 
